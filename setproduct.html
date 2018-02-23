@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<script src="web3.min.js"></script>
+	<script src="RopstenNetwork.js"></script>
+	<link rel="stylesheet" type="text/css" href="design.css">
+</head>
+
+<body style="background-color:#b3b3b3">
+<script>
+function sp()
+{
+var a=document.getElementById("aa").value;
+var b=document.getElementById("ab").value;
+var c=document.getElementById("ac").value;
+var d=document.getElementById("ad").value;
+var e=document.getElementById("ae").value;
+yes.setproducts(a,b,c,d,e,function(err,res){ if(!err) { alert(res); }});
+console.log("done");
+
+}
+</script>
+
+<center>
+<table border=2 width="40%" style="background-color:#DEE7EB">
+	<tr>
+		<td><p><b>Enter productid</b></p></td>
+		<td><input id="aa" type="text" placeholder="ProductId"/></td>
+	</tr>
+	<tr>
+		<td><b><p>Enter productname</b></p></td>
+		<td><input id="ab" type="text" placeholder="ProductName"/></td>
+	</tr>
+	<tr>
+		<td><b><p>Enter grade</b></p></td>
+		<td><input id="ac" type="text" placeholder="Grade"/></td>
+	</tr
+	<tr>
+		<td><p><b>Enter Availablity</b><p></td>
+		<td><input id="ad" type="texr" placeholder="Availability"/></td>
+	</tr>
+	<tr>
+		<td><p><b>Enter price</b></p></td>
+		<td><input id="ae" type="text" placeholder="Price"/></td>
+	</tr>
+</table>
+<br>
+<button onclick="sp()">SetProducts</button>
+</br>
+</center>
+<script>
+
+function se()
+{	
+	var z=document.getElementById("zzz").value;
+	var a=document.getElementById("aaa").value;
+	var b=document.getElementById("abb").value;
+  yes.studententry(z,a,b,function(err,res){ if(!res) { alert(res); }});
+}
+</script>
+<center>
+<br>
+<table border=2 width="40%" style="background-color:#DEE7EB">
+	<tr>
+		<td><p><b>Enter Id</b></p></td>
+		<td><input id="zzz" type="text" placeholder="CustomerId"/></td>
+	</tr>
+	<tr>
+		<td><p><b>Enter StudentName</b></p></td>
+		<td><input id="aaa" type="text" placeholder="StudentName"/></td>
+	</tr>
+	<tr>
+		<td><p><b>Enter percentage</b></p></td>
+		<td><input id="abb" type="text" placeholder="Percentage"/></td>
+	</tr>
+</table>
+</br>
+<br>
+<button onclick="se()">studentEntry</button>
+</br>
+<br>
+<p><a href="courseavailable.html">Find Offer</a></P>
+</br>
+</center>
+
+</body>
+</html>
