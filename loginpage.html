@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<meta charset="utf-8">
+<head>
+<link rel="stylesheet" type="text/css" href="design.css">
+</head>
+<body style="background-color:#b3b3b3">
+<div>
+<b><p id="date" ></p></b>
+<script>
+	n =  new Date();
+	y = n.getFullYear();
+	m = n.getMonth() + 1;
+	d = n.getDate();
+document.getElementById("date").innerHTML = "Date: "+ d + "/"+  m  +"/"+ y;
+</script>
+<form >
+<center>
+<table border=2  width="75%"style="background-color:#E6E6FA" >
+<tr>
+ 	<td><p><b>USERNAME</b></p></td>
+ 	<td><input type="text" placeholder="AdminId" id="un"></td>
+</tr>
+<tr>
+ 	<td><p><b>PASSWORD</b><p></td>
+	<td><input type="password" placeholder="password" id="pwd"></td>
+</tr>
+</table>
+	<br><input type="button" onclick=" return login()" value="LOGIN"></br>
+</center>
+</form>
+<script>
+function login()
+{
+	var a= document.getElementById("un").value;
+	var b= document.getElementById("pwd").value;
+
+if(a=='ak' && b==12345)
+{
+	window.location="setproduct.html";
+}
+else
+{
+	alert("OOPS!.....Username is errored");
+}
+}
+</script>
+</center>
+</div>
+</body>
+</html>
