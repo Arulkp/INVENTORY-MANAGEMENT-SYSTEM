@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<script src="web3.min.js"></script>
+	<script src="RopstenNetwork.js"></script>
+	<link rel="stylesheet" type="text/css" href="design.css">
+</head>
+<body style="background-color:#b3b3b3">
+
+<center>
+	<p>Do you have Token</p>
+	<a href="token.html">NO</a>
+</center>
+<center>
+	<table border=2 width="40%"style="background-color:#E6E6FA">
+<tr> 	
+	<td><p>Enter customerId</p></td>
+	<td><input id="ci" type="text"></td>
+</tr>
+<tr> <td><p>Enter custmerName</p></td>
+	<td><input id="cn" type="text"></td>
+ </tr>
+<tr>
+ 	<td><p>Enter productname</p></td>
+	<td><input id="pn" type="text"></td>
+</tr>
+<tr> 
+	<td><p>Enter price</p></td>
+	<td><input id="p" type="text"></td>
+</tr>
+</table>
+	<br><button onclick="sold()">SOLD</button></br>
+	<a href="https://www.google.co.in/">Exit</a>
+</center>
+	<p><b>Check ProductList</b></p><button onclick="pl()">ProductList</button>
+	<p><b>Check product Discription</b></p><button onclick="prod()">Product Discription</button>
+	<p><b>Check SaleList</b></p><button onclick="salelist()">Salelist</button>
+	<p><b>Check SaleAmount</b></p><button onclick="saleamount()">SaleAmount</button>
+	<p><b>Check SaleToken</b></p><button onclick="saleToken()">SaleToken</button>
+	<p><b>Check Balance</b></p><input type="text" id="add">	
+<button onclick="blf()">Balance</button>
+<right>
+<b><p>Check CustmerDetails</p></b>
+<button onclick="customerdetail()">customer</button>
+<right>
+<script>
+function blf()
+{
+	var add=document.getElementById("add").value;
+	yes.balanceOf(add,function(err,res)
+{
+if(!err){ alert(res); }});
+}
+
+function sold()
+{
+	var e1=document.getElementById("ci").value;
+	var e2=document.getElementById("cn").value;
+	var e3=document.getElementById("pn").value;
+	var e4=document.getElementById("p").value;
+	yes.sold(e1,e2,e3,e4,function(err,res){ if(!err){ console.log(res); } });
+}
+function prod()
+{
+	window.location="productdetail.html";
+}
+function pl()
+{
+	window.location="productlist.html";
+}
+function salelist()
+{
+
+	yes.salelist(function(err,res){
+	if(!err)
+	{
+	alert(res);
+	}});
+
+}
+
+	
+
+function saleamount()
+{
+	yes.saleamount(function(err,res){ if(!err){ alert(res); }});
+}
+function saleToken()
+{
+	yes.saletoken(function(err,res){ if(!err){ alert(res);} });
+}
+function customerdetail()
+{
+window.location="customer.html";
+}
+
+</script>
+
+
+</body>
+</html>
+
+	
