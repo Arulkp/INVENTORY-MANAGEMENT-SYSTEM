@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<script src="web3.min.js"></script>
+	<script src="RopstenNetwork.js"></script>
+</head>
+
+<body style="background-color:#b3b3b3">
+<center>
+<table border=1 style="background-color:#E6E6FA">
+	<tr>
+		<td><p>Enter customerid</p></td>
+		<td><input id="aa"><input type="button" onclick="pro()" value="CheckProducts"></td>
+	</tr>
+	<tr>
+		<td><p>CustmerName</p></td>
+		<td><input type="text" id="r1"></td>
+	</tr>
+	<tr>
+		<td><p>BuyingProducts</p></td>
+		<td><input type="text" id="r2"></td>
+	</tr>
+	<tr>
+		<td><p>Percentage</p></td>
+		<td><input type="text" id="r3"></td>
+	</tr>
+	<tr>
+		<td><p>Quantity</p></td>
+		<td><input type="text" id="r4"></td>
+	</tr>
+	
+</table>
+<script>
+function pro()
+{
+var a=document.getElementById("aa").value;
+yes.customer(a,function(err,result){ 
+
+ document.getElementById("r1").value=result[0];
+ document.getElementById("r2").value=result[1];
+ document.getElementById("r3").value=result[2];
+ document.getElementById("r4").value=result[3];
+});
+}
+</script>
+</body>
+</html>
+
+
