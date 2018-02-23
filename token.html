@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<script src="web3.min.js"></script>
+	<script src="RopstenNetwork.js"></script>
+	<link rel="stylesheet" type="text/css" href="design.css">
+</head>
+<body style="background-color:#b3b3b3">
+<div>
+<center>
+<table border=2 width="40%"style="background-color:#E6E6FA">
+<script>
+</script>
+<center>
+	<table border=1 style="background-color:#E6E6FA">
+<tr>
+	<td><p>Enter customer Address</p></td>
+	<td><input type="text" id="accounts"></td>
+</tr>
+<tr>
+	<td><p>Enter Tokens</p></td>
+	<td><input type="text" id="amount"></td>
+</tr>
+<tr>
+	<td><p>Enter value</p></td>
+	<td><input type="text" id="value"></td>
+</tr>
+</table>
+<br><b><a href="sold.html">Go to Shop</a></b></br>
+</center>
+	<br><center><button onclick="bt()">BuyToken</button></center></br>
+	<b><p>Check TotalSupply</p></b>
+	<button onclick="ts()">TotalSupply</button>
+	<b><p>Check TokenName</p></b>
+	<button onclick="tn()">TokenName</button>
+	<b><p>Check TokenSympol</p><b>
+	<button onclick="tss()">TokenSymbol</button>
+<script>
+function bt()
+{
+          		var amount=document.getElementById("amount").value;
+			amount=web3.toWei(amount, "ether");
+			web3.eth.defaultAccount=document.getElementById("accounts").value;
+			yes.buyToKen(document.getElementById("value").value,{value:amount}, function(err, result){
+			if(!err)
+	{
+			console.log(result);
+
+	}});
+}
+function ts()
+{
+	yes.totalSupply(function(err,res){ if(!err){ alert(res); }}); 
+}
+function tn()
+{
+	yes.name(function(err,res){ if(!err){ alert(res); }});
+}
+function tss()
+{
+	yes.symbol(function(err,res){ if(!err){ alert(res); }});
+}
+</script>
+</div>
+</body>
+</html>
